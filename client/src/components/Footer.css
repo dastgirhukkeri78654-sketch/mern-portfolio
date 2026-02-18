@@ -1,0 +1,38 @@
+import React from "react";
+export default function Footer() {
+  return (
+    <footer
+      style={{
+        background: "#020617",
+        padding: "25px",
+        textAlign: "center",
+        marginTop: "40px",
+        borderTop: "1px solid #38bdf8",
+      }}
+    >
+      <p>Connect with me</p>
+
+      <a
+        href="https://github.com/dastgirhukkeri78654-sketch"
+        target="_blank"
+        rel="noreferrer"
+        style={{ margin: "0 15px", color: "#38bdf8", fontWeight: "bold" }}
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/dastgir-hukkeri-5b7058332"
+        target="_blank"
+        rel="noreferrer"
+        style={{ margin: "0 15px", color: "#38bdf8", fontWeight: "bold" }}
+      >
+        LinkedIn
+      </a>
+
+      <p style={{ marginTop: "15px", fontSize: "14px", opacity: 0.7 }}>
+        © 2026 Dastgir Bashir Hukkeri
+      </p>
+    </footer>
+  );
+}

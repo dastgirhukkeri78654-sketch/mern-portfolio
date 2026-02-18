@@ -1,0 +1,14 @@
+.skills-page {
+  padding: 60px;
+  text-align: center;
+}
+
+.skill-grid span {
+  display: inline-block;
+  background: #00ffff;
+  color: black;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}

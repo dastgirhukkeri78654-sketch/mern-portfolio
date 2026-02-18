@@ -1,0 +1,13 @@
+.about {
+  padding: 60px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #00ffff;
+  color: black;
+  padding: 10px 15px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
