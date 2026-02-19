@@ -1,38 +1,53 @@
-import { motion } from "framer-motion";
+import "./Projects.css";
+import portfolioImg from "../assets/project1.jpg";
+import restaurantImg from "../assets/project2.jpg";
+import taskImg from "../assets/project3.jpg";
 
-function Projects() {
+export default function Projects() {
+  const projects = [
+    {
+      title: "MERN Portfolio Website",
+      image: portfolioImg,
+      description:
+        "A full stack portfolio website built using MERN stack. It includes contact form integration with MongoDB, smooth navigation and responsive design.",
+      tech: "React, Node.js, Express, MongoDB",
+      github: "https://github.com/dastgirhukkeri78654-sketch/mern-portfolio",
+    },
+    {
+      title: "Restaurant Web Application",
+      image: restaurantImg,
+      description:
+        "A complete restaurant management website with login authentication, menu display and backend database integration.",
+      tech: "React, Node.js, MongoDB",
+      github: "https://github.com/dastgirhukkeri78654-sketch/restaurant",
+    },
+    {
+      title: "Task Manager App",
+      image: taskImg,
+      description:
+        "A task management system where users can create, update and delete daily tasks with proper CRUD operations.",
+      tech: "MERN Stack",
+      github: "https://github.com/dastgirhukkeri78654-sketch/Taskmanageapp",
+    },
+  ];
+
   return (
-    <motion.div
-      className="section"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="card">
-        <h1>My Skills & Projects</h1>
+    <div className="projects-container">
+      <h2 className="projects-title">My Projects</h2>
 
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>C Programming</li>
-          <li>Java</li>
-          <li>Python</li>
-          <li>Data Structures & Algorithms (using C)</li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React.js, Node.js, Express.js</li>
-          <li>MongoDB</li>
-          <li>UI/UX Design using Figma</li>
-        </ul>
-
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Creative Thinking</li>
-          <li>Problem Solving</li>
-          <li>Logical Thinking</li>
-          <li>Team Collaboration</li>
-        </ul>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <img src={project.image} alt={project.title} />
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <p className="tech">{project.tech}</p>
+            <a href={project.github} target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </div>
+        ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
-
-export default Projects;

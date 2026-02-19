@@ -1,13 +1,114 @@
-.about {
-  padding: 60px;
+.about-section {
+  min-height: 100vh;
+  padding: 80px 10%;
+  background: #0a192f;
+  color: white;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-.skills span {
-  display: inline-block;
-  background: #00ffff;
-  color: black;
-  padding: 10px 15px;
-  margin: 8px;
-  border-radius: 6px;
-  font-weight: bold;
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #00bfff;
+  position: relative;
+  animation: slideDown 1s ease;
+}
+
+.objective-card {
+  background: #112240;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2);
+  transition: 0.4s ease;
+  animation: slideUp 1.2s ease;
+}
+
+.objective-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 191, 255, 0.4);
+}
+
+.objective-card h3 {
+  color: #00bfff;
+  margin-bottom: 15px;
+}
+
+.objective-card p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.education-section h3 {
+  margin-bottom: 20px;
+  color: #00bfff;
+  animation: fadeIn 1.5s ease;
+}
+
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #112240;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: slideUp 1.5s ease;
+}
+
+.education-table th,
+.education-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.education-table th {
+  background-color: #0f3057;
+  color: #00bfff;
+}
+
+.education-table tr {
+  transition: 0.3s ease;
+}
+
+.education-table tr:hover {
+  background-color: rgba(0, 191, 255, 0.1);
+}
+
+.education-table td {
+  border-top: 1px solid #1f4068;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 5%;
+  }
+
+  .education-table th,
+  .education-table td {
+    font-size: 14px;
+  }
 }

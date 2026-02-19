@@ -1,45 +1,51 @@
-import { motion } from "framer-motion";
-import profile from "../assets/profile.jpg";
+import React from "react";
 import "./Home.css";
+import profilePic from "../assets/profile.jpg";
 
-function Home() {
+const Home = () => {
   return (
-    <motion.div
-      className="home"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <section className="home" id="home">
       <div className="home-container">
-        <motion.img
-          src={profile}
-          alt="Dastgir"
-          className="profile-img"
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1 }}
-        />
 
-        <motion.div
-          className="home-text"
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h1>Dastgir Bashir Hukkeri</h1>
-          <h3>MERN Stack Developer</h3>
+        {/* LEFT SIDE IMAGE */}
+        <div className="home-image">
+          <img src={profilePic} alt="Dastagir" />
+        </div>
+
+        {/* RIGHT SIDE CONTENT */}
+        <div className="home-content">
+          <h1>
+            Hi, I'm <span>Dastagir Bashir Hukkeri</span>
+          </h1>
+
+          {/* PROFESSIONAL POINTS */}
+          <ul className="home-points">
+            <li>✔ BCA Graduate</li>
+            <li>✔ MERN Stack Developer</li>
+            <li>✔ Problem Solver</li>
+          </ul>
+
           <p>
-            BCA Student | Full Stack Developer | Creative Thinker | Problem Solver
+            I am a passionate MERN Stack Developer who loves building modern
+            web applications and solving real-world problems with clean,
+            scalable, and user-friendly solutions.
           </p>
 
-          <div className="buttons">
-            <a href="https://github.com/dastgirhukkeri78654-sketch" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/dastgir-hukkeri-5b7058332/" target="_blank" rel="noreferrer">LinkedIn</a>
+          {/* BUTTONS */}
+          <div className="home-buttons">
+            <a href="/projects" className="btn-primary">
+              Go to Projects
+            </a>
+
+            <a href="/contact" className="btn-secondary">
+              Go to Contact
+            </a>
           </div>
-        </motion.div>
+        </div>
+
       </div>
-    </motion.div>
+    </section>
   );
-}
+};
 
 export default Home;
